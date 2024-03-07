@@ -14,11 +14,11 @@ if not hasattr(st, 'already_started_server'):
         Just close this browser tab and open a new one to see your Streamlit
         app.
     ''')
-
+    
     from fastapi import FastAPI
     app = FastAPI()
 
-    @app.post('/shipping-rate')
+    @app.get('/shipping-rate')
     def shipping_rate():
         return {"item": "Eco bottle"}
     pass
